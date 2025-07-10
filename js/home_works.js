@@ -64,7 +64,7 @@ function moveRigh() {
 
 moveRigh();
 
-//TIMER
+//_TIMER_
 const btnStop = document.querySelector('#stop');
 const btnStart = document.querySelector('#start');
 const btnReset = document.querySelector('#reset');
