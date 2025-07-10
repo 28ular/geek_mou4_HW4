@@ -85,8 +85,8 @@ btnStop.onclick = () => {
     timerId = null;
 }
 btnReset.onclick = () => {
-    sec =0;
-
+    sec = 0;
+    
 }
 
 
