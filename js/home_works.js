@@ -1,9 +1,6 @@
-
 const writter = document.querySelector('#gmail_input');
 const button = document.querySelector('#gmail_button');
 const result = document.querySelector('#gmail_result');
-const block = document.querySelector('.child_block');
-
 button.onclick = () => {
     const value = writter.value;
     const rexExp = /^[a-z0-9A-Z_+%]+@gmail.com/
@@ -15,16 +12,83 @@ button.onclick = () => {
         result.style.color = 'red'
     }
 }
+// MOVE BLOCK
+const block = document.querySelector('.child_block');
+const parent = document.querySelector('.parent_block');
 
-let position = 0;
+const parentOFwidht = parent.clientWidth - block.offsetWidth;
+const parentOFheight = parent.clientHeight - block.offsetHeight;
 
-function moveRight() {
-    if (position <= 450) {
-        block.style.left = position + 'px';
-        position += 2;
-        requestAnimationFrame(moveRight);
+let positionX = 0;
+let positionY = 0;
+let naprovlenie = 'right';
+
+function moveRigh() {
+    if (naprovlenie === 'right') {
+        if (positionX < parentOFwidht) {
+            positionX++;
+        } else {
+            naprovlenie = 'down';
+        }
     }
+
+    if (naprovlenie === 'down') {
+        if (positionY < parentOFheight) {
+            positionY++;
+        } else {
+            naprovlenie = 'left';
+        }
+    }
+
+    if (naprovlenie === 'left') {
+        if (positionX > 0) {
+            positionX--;
+        } else {
+            naprovlenie = 'up';
+        }
+    }
+
+    if (naprovlenie === 'up') {
+        if (positionY > 0) {
+            positionY--;
+        } else {
+            naprovlenie = 'right';
+        }
+    }
+
+    block.style.left = `${positionX}px`;
+    block.style.top = `${positionY}px`;
+
+    requestAnimationFrame(moveRigh);
 }
 
-moveRight();
+moveRigh();
+
+//TIMER
+const btnStop = document.querySelector('#stop');
+const btnStart = document.querySelector('#start');
+const btnReset = document.querySelector('#reset');
+const seconds = document.querySelector('#seconds');
+
+let sec = 0;
+let timerId = null;
+btnStart.onclick = () => {
+    if (timerId !== null) return;
+
+    timerId = setInterval(()=> {
+            sec++;
+            seconds.textContent = sec;
+            },1000)
+}
+btnStop.onclick = () => {
+    clearInterval(timerId);
+    timerId = null;
+}
+btnReset.onclick = () => {
+    sec =0;
+
+}
+
+
+
 
