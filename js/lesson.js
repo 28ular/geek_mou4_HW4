@@ -15,3 +15,7 @@ phoneButton.onclick = () => {
         phoneResult.style.color = 'red'
     }
 };
+// TAP SLIDER
+
+const tab_content_blocks = document.querySelectorAll('.tab_content_block');
+console.log(tab_content_blocks);

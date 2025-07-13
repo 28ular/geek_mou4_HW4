@@ -72,9 +72,9 @@ const seconds = document.querySelector('#seconds');
 
 let sec = 0;
 let timerId = null;
+
 btnStart.onclick = () => {
     if (timerId !== null) return;
-
     timerId = setInterval(()=> {
             sec++;
             seconds.textContent = sec;
@@ -86,7 +86,6 @@ btnStop.onclick = () => {
 }
 btnReset.onclick = () => {
     sec = 0;
-    
 }
 
 
