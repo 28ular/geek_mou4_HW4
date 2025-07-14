@@ -17,16 +17,17 @@ modalCloseBtn.onclick = () => {
 modalOpenBtn.onclick = () => {
     open()
 }
+
 modal.onclick = (event) => {
     if (event.target === modal) {
         close()
     }
 }
 
-
-setInterval(() => {
-    open()
-},10000)
+//
+// setInterval(() => {
+//     open()
+// },10000)
 
 function onScroll() {
     const scrollTop = window.scrollY;

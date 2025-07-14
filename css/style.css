@@ -2,7 +2,7 @@
 
 .header {
     height: 80px;
-    background: #2c2d2f;
+    background: #0A0E2A;
     display: flex;
     align-items: center;
     width: 100%;
@@ -20,6 +20,10 @@
 
 /* LOGOTYPE */
 
+.logotype img {
+    width: 80px;
+    height: 80px;
+}
 .logotype {
     display: flex;
     align-items: center;
@@ -27,7 +31,6 @@
     font-size: 22px;
     height: 60px;
     width: fit-content;
-    background: var(--orange);
     padding: 8px;
     color: white;
     border-radius: 5px;

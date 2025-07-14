@@ -16,11 +16,9 @@ phoneButton.onclick = () => {
     }
 };
 // TAP SLIDER
-<<<<<<< HEAD
 
 const tab_content_blocks = document.querySelectorAll('.tab_content_block');
 console.log(tab_content_blocks);
-=======
 const tabContentBlocks = document.querySelectorAll('.tab_content_block');
 const tabs = document.querySelectorAll('.tab_content_item');
 const tapParent = document.querySelector('.tab_content_items');
@@ -51,6 +49,7 @@ tapParent.onclick = (event) => {
             }
         });
     }
+
     const autoSlider = (i = 0) => {
         HideTabContent();
         showTabContent(i);
@@ -66,4 +65,5 @@ tapParent.onclick = (event) => {
     }
     autoSlider()
 }
->>>>>>> 7b38fcc (Добавил все файлы)
+
+
