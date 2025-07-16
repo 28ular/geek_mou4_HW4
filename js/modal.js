@@ -24,10 +24,11 @@ modal.onclick = (event) => {
     }
 }
 
+//
+// setInterval(() => {
+//     open()
+// },10000)
 
-setInterval(() => {
-    open()
-},10000)
 
 function onScroll() {
     const scrollTop = window.scrollY;
@@ -39,6 +40,7 @@ function onScroll() {
         window.removeEventListener('scroll', onScroll);
     }
 }
+
 
 window.addEventListener('scroll', onScroll);
 

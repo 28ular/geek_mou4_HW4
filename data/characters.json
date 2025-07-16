@@ -1,0 +1,30 @@
+[
+  {
+    "name": "kate denson",
+    "old":{
+      "age": 20
+    },
+    "photo": {
+    "url": "https://cdna.artstation.com/p/assets/covers/images/021/555/962/large/eric-bourdages-winterkate-thumb2.jpg?1572128432"
+  }
+  },
+  {
+    "name": "oni",
+    "old": {
+      "age": 150
+    },
+    "photo": {
+      "url":"https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/01/base-dbd-fog-background-logo-the-oni.jpg"
+
+    }
+  },
+  {
+    "name": "ghost face",
+    "old": {
+      "age": 27
+    },
+    "photo": {
+      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDXgdIL93tNINiqqIFllGlZayjsZ9gmyLcWA&s"
+    }
+  }
+]

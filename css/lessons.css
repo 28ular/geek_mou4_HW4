@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Barcelony';
+    src: url('../fonts/Barcelony.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 /* PHONE CHECKER */
 
@@ -33,6 +40,18 @@
     background: black;
     padding: 100px 0;
 }
+.tab_slider h3 {
+        font-family: 'Barcelony', sans-serif;
+        font-size: 28px;
+        word-spacing: 20px;
+        color: 	 #8B1E3F;
+        transition: all ease-in-out 1s;
+}
+.tab_slider h3:hover {
+    scale: 1.1;
+    
+}
+
 
 .tab_content_block {
     width: 700px;
