@@ -80,20 +80,20 @@ strong {
     color: #F79300;
 }
 
-label {
-    font-size: 24px;
-    color: var(--orange);
-}
+/*label {*/
+/*    font-size: 24px;*/
+/*    color: var(--orange);*/
+/*}*/
 
-input {
-    width: 350px;
-    height: 50px;
-    font-size: 20px;
-    padding-left: 5px;
-    color: var(--orange);
-    background: black;
-    border: 2px solid var(--orange);
-}
+/*input {*/
+/*    width: 350px;*/
+/*    height: 50px;*/
+/*    font-size: 20px;*/
+/*    padding-left: 5px;*/
+/*    color: var(--orange);*/
+/*    background: black;*/
+/*    border: 2px solid var(--orange);*/
+/*}*/
 
 .checker {
     color: white;

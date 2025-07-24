@@ -130,3 +130,65 @@ conveter(euroInput)
 
 
 //FSD MVC. MVP. .MWV
+
+
+// CARD SWITCHER
+
+
+// card switcher
+
+const cardBlock = document.querySelector('.card')
+const btnNext = document.querySelector('#btn-next')
+const btnPrev = document.querySelector('#btn-prev')
+
+let numId = 0 //
+
+btnNext.onclick = () => {
+    numId++
+    if (numId === 200) {
+        numId = 0
+    }
+    fetch(`https://jsonplaceholder.typicode.com/todos/${numId}`)
+        .then(response => response.json())
+        .then(data => {
+            const {title , id , completed} = data
+            cardBlock.style.borderColor = completed ? 'green' : 'red'
+            cardBlock.innerHTML = `
+                    <p>${title}</p>
+                    <p style ="color: ${completed ? 'green' : 'red'}  ">${completed}</p>
+                    <span>${id}</span>
+               `
+
+        })
+}
+
+btnPrev.onclick = () => {
+    numId--
+    if (numId === 0) {
+        numId = 200
+    }
+
+
+    fetch(`https://jsonplaceholder.typicode.com/todos/${numId}`)
+        .then(response => response.json())
+        .then(data => {
+            const {title , id , completed} = data
+            cardBlock.style.borderColor = completed ? 'green' : 'red'
+            cardBlock.innerHTML = `
+                    <p>${title}</p>
+                    <p style ="color: ${completed ? 'green' : 'red'}  ">${completed}</p>
+                    <span>${id}</span>
+               `
+
+        })
+}
+window.addEventListener('DOMContentLoaded', () => {
+    btnNext.dispatchEvent(new Event ('click'));
+})
+
+
+fetch('https://jsonplaceholder.typicode.com/posts')
+   .then(info  => {
+       console.log(info)
+
+})
