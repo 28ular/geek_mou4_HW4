@@ -37,25 +37,82 @@
 /* TAB SLIDER */
 
 .tab_slider {
-    background: black;
     padding: 100px 0;
+    background-image: url(../slider_club/bgi.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .tab_slider h3 {
-        font-family: 'Barcelony', sans-serif;
-        font-size: 28px;
+        font-family: 'barca_13', sans-serif;
+        font-size: 90px;
         word-spacing: 20px;
         color: 	 #8B1E3F;
         transition: all ease-in-out 1s;
+        margin-left: 320px;
+        margin-top: 40px;
+       padding-top: 40px;
 }
 .tab_slider h3:hover {
     scale: 1.1;
     
 }
 
+.tab_content_block img {
+    width:600px;
+    margin-left: 86px;
+    /*margin-bottom: 40px;*/
+    /*padding-bottom: 40px;*/
+    background-position: center;
+}
+.tab_content_block .info {
+    position: relative;
+    width: fit-content;
+    padding-left: 20px;
+}
+
+.tab_content_block .info img {
+    display: block;
+    border-radius: 10px;
+}
+
+/* Стили для текста поверх картинки */
+.tab_content_block .info span {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    text-shadow: 1px 1px 3px black;
+    color: white;
+    font-size: 18px;
+}
+
+/* Можно индивидуально позиционировать каждый span */
+.tab_content_block .info span:nth-of-type(1) {
+    bottom: 90px;
+    left: 400px;
+    /*color: rgba(255, 255, 255, 0.17);*/
+
+    font-size: 150px;
+    font-weight: 800;
+    color: white;
+    mix-blend-mode: overlay; /* или 'lighten', 'difference' */
+    opacity: 0.40;
+    pointer-events: none;
+    user-select: none;
+}
+.tab_content_block .info span:nth-of-type(3) {
+    left: 400px;
+    bottom: 20px;
+}
+.tab_content_block .info span:nth-of-type(2) {
+    left: 400px;
+    bottom: 80px;
+    font-size: 30px;
+}
 
 .tab_content_block {
-    width: 700px;
-    border: 1px solid var(--orange);
+    width: 790px;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -63,7 +120,12 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    height: 170px;
+    height: 520px;
+    position: relative;
+}
+
+.info {
+    position: absolute;
 }
 
 .tab_content_block p {
@@ -80,15 +142,23 @@
 }
 
 .tab_content_item {
-    padding: 10px;
+
+    padding: 30px;
     height: 30px;
     color: white;
+    margin-top: 5px;
     border: 1px solid var(--orange);
     text-align: center;
     font-size: 20px;
     cursor: pointer;
     display: grid;
     place-content: center;
+    font-family: 'barca_13', sans-serif;
+    transition: all ease-in-out 0.3s;
+}
+.tab_content_item:hover {
+    scale: 1.1;
+    box-shadow: 0 8px 30px rgb(119, 21, 21);
 }
 
 .tab_content_item_active {
@@ -190,3 +260,101 @@
 hr {
     width: 100%;
 }
+
+
+
+
+.card_item img {
+    width: 400px;
+    height: 500px;
+}
+
+
+
+.slider-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 100px 0;
+    background: #181733;
+}
+
+.slider-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.4s ease-in-out;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.card {
+    flex: 0 0 auto;
+    background-color: #111344;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    width: 250px;
+    padding: 15px;
+    text-align: center;
+    color: white;
+    height: 400px;
+    overflow-y: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 16px;
+    margin: 10px 0 5px;
+}
+
+.card p {
+    font-weight: bold;
+    color: #f5f5f5;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fcbe03;
+    color: #000;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 50%;
+}
+
+.slider-btn.left {
+    left: 10px;
+}
+
+.slider-btn.right {
+    right: 10px;
+}
+.card::-webkit-scrollbar {
+    width: 10px;               /* ширина вертикального скролла */
+    height: 10px;              /* высота горизонтального (если будет) */
+}
+
+.card::-webkit-scrollbar-track {
+    background: #f0f0f0;       /* фон дорожки */
+    border-radius: 10px;
+}
+
+.card::-webkit-scrollbar-thumb {
+    background-color: #888;    /* сам бегунок */
+    border-radius: 10px;
+    border: 2px solid #f0f0f0; /* отступ вокруг скролла */
+}
+
+.card::-webkit-scrollbar-thumb:hover {
+    background: #555;          /* цвет при наведении */
+}
+

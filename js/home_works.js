@@ -180,4 +180,194 @@ const any =
 
     any.onload = () => {
         console.log(any.response)
+    };
+
+
+
+
+
+    // tickets buy
+
+const seats = document.querySelectorAll('.checkler');
+const corzinaItem = document.querySelector('.indicator_ticket span'); // Изменил селектор
+const btn_oformlenie = document.querySelector('#oformlenie')
+const set_parent = document.querySelector('.container_your_set')
+const form_parent = document.querySelector('.card_form_container')
+const exit = document.querySelector('.close')
+const inputUser = document.querySelector('#username')
+// indicator pay
+
+const indicatorPay = document.querySelector('#indi');
+const payerBtn  = document.querySelector('#payer');
+const p = document.querySelector('#p_paer')
+let tickets_len = 0;
+
+
+
+seats.forEach((seat) => {
+    seat.onclick = () => {
+        if (seat.classList.contains('checked')) {
+            seat.classList.remove('checked');
+            tickets_len--;
+        } else {
+            seat.classList.add('checked');
+            tickets_len++;
+        }
+        corzinaItem.innerText = tickets_len;
+        ubdatePrice()
     }
+})
+console.log()
+function ubdatePrice () {
+
+    if (tickets_len === 1) {
+        indicatorPay.innerText = '340'
+    } else if (tickets_len === 2) {
+        indicatorPay.innerText = '340' * 2
+    } else if (tickets_len === 3) {
+        indicatorPay.innerText = '340' * 3
+    }else if (tickets_len === 4) {
+        indicatorPay.innerText = '340' * 4
+    }else if (tickets_len === 5) {
+        indicatorPay.innerText = '340' * 5
+    }else if (tickets_len === 6) {
+        indicatorPay.innerText = '340' * 6
+    }else if (tickets_len === 7) {
+        indicatorPay.innerText = '340' * 7
+    }else if (tickets_len === 8) {
+        indicatorPay.innerText = '340' * 8
+    }else if (tickets_len === 9) {
+        indicatorPay.innerText = '340' * 9
+    }else if (tickets_len === 10) {
+        indicatorPay.innerText = '340' * 10
+    }else if (tickets_len === 11) {
+        indicatorPay.innerText = '340' * 11
+    }else if (tickets_len === 12) {
+        indicatorPay.innerText = '340' * 12
+    }else if (tickets_len === 13) {
+        indicatorPay.innerText = '340' * 13
+    }else if (tickets_len === 14) {
+        indicatorPay.innerText = '340' * 14
+    }else if (tickets_len === 15) {
+        indicatorPay.innerText = '340' * 15
+    }else if (tickets_len === 16) {
+        indicatorPay.innerText = '340' * 16
+    }else if (tickets_len === 17) {
+        indicatorPay.innerText = '340' * 17
+    }else if (tickets_len === 18) {
+        indicatorPay.innerText = '340' * 18
+    }else if (tickets_len === 19) {
+        indicatorPay.innerText = '340' * 19
+    }else if (tickets_len === 20) {
+        indicatorPay.innerText = '340' * 20
+    }else if (tickets_len === 21) {
+        indicatorPay.innerText = '340' * 21
+    }else if (tickets_len === 22) {
+        indicatorPay.innerText = '340' * 22
+    }else if (tickets_len === 23) {
+        indicatorPay.innerText = '340' * 23
+    }else if (tickets_len === 24) {
+        indicatorPay.innerText = '340' * 24
+    }else if (tickets_len === 25) {
+        indicatorPay.innerText = '340' * 25
+    }else if (tickets_len === 26) {
+        indicatorPay.innerText = '340' * 26
+    }else if (tickets_len === 27) {
+        indicatorPay.innerText = '340' * 27
+    }else if (tickets_len === 28) {
+        indicatorPay.innerText = '340' * 28
+    }else if (tickets_len === 29) {
+        indicatorPay.innerText = '340' * 29
+    }else if (tickets_len === 30) {
+        indicatorPay.innerText = '340' * 30
+    }else if (tickets_len === 31) {
+        indicatorPay.innerText = '340' * 31
+    }else if (tickets_len === 32) {
+        indicatorPay.innerText = '340' * 32
+    }else if (tickets_len === 33) {
+        indicatorPay.innerText = '340' * 33
+    }else if (tickets_len === 34) {
+        indicatorPay.innerText = '340' * 34
+    }else if (tickets_len === 35) {
+        indicatorPay.innerText = '340' * 35
+    }else if (tickets_len === 36) {
+        indicatorPay.innerText = '340' * 36
+    }else if (tickets_len === 37) {
+        indicatorPay.innerText = '340' * 37
+    }else if (tickets_len === 38) {
+        indicatorPay.innerText = '340' * 38
+    }
+}
+
+
+
+
+
+
+
+
+
+
+//
+// payerBtn.onclick = () => {
+//     alert('clicked');
+//     indicatorPay.innerText = 'успешно!'
+//     p.innerText = ''
+//     if (indicatorPay.innerText === 'успешно!') {
+//         seats.forEach((seat) => {
+//             seat.classList.remove('checked');
+//             corzinaItem.innerText = '0'
+//         })
+//
+//
+//     }
+//
+// }
+console.log(payerBtn)
+
+btn_oformlenie.onclick = () => {
+    seats.forEach((seat) => {
+        seat.style.display = 'none';
+        set_parent.style.display = 'none';
+        form_parent.style.display = 'flex';
+    })
+}
+
+
+exit.onclick = () => {
+    seats.forEach((seat) => {
+        seat.style.display = 'flex';
+        set_parent.style.display = 'flex';
+        form_parent.style.display = 'none';
+    })
+}
+
+
+payerBtn.onclick = (e) => {
+    const userValue = inputUser.value.trim()
+    const rexExp = /[A-Za-z]/
+    if (rexExp.test(userValue)) {
+        payerBtn.innerText = 'успешно!'
+        alert('благодарим за покупку!')
+        setTimeout(() => {
+            form_parent.style.display = 'none';
+        },1500)
+    } else {
+        alert('fill in correctly!')
+        // payerBtn.innerText = 'оплатить:'
+    }
+}
+
+
+// payerBtn.onclick = (e) => {
+//     const userValue = inputUser.value.trim()
+//     const regExp = /[A-Za-z]/
+//
+//     if (regExp.test(userValue)) {
+//         payerBtn.innerText = 'Успешно'
+//         alert('Благодарим за покупку')
+//     } else {
+//         alert('Ошибка: введите имя латиницей')
+//         payerBtn.innerText = 'Оплатить'
+//     }
+// }

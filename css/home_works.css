@@ -1,9 +1,84 @@
+@font-face {
+    font-family: 'Barcelony';
+    src: url('../fonts/barcelona_2013_by_hd.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*gmail_input*/
+#gmail_input {
+    padding: 7px 25px;
+    border: none;
+    border-radius: 5px;
+    background: grey;
+    font-family: 'Barcelony', sans-serif;
+}
+#gmail_input::placeholder {
+    color: rgba(0, 0, 0, 0.65);
+
+}
+#gmail_input:focus {
+    color: black;
+    background: grey;
+}
+
+
+/*phone_input*/
+#phone_input {
+    padding: 7px 25px;
+    border: none;
+    border-radius: 5px;
+    background: grey;
+    color: black;
+    font-family: 'Barcelony', sans-serif;
+}
+#phone_input::placeholder {
+    color: rgba(0, 0, 0, 0.65);
+}
+
+
+
+/*header*/
+
+.header {
+    height: 80px;
+    background: #0A0E2A;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+
+}
+.container_1 {
+    max-width: 1550px;
+    height: 100%;
+    width: 100%;
+
+}
+
+.inner_header {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 118px;
+}
+.header_content:hover {
+    scale: 1.1;
+}
+
 
 /* GMAIL BLOCK */
 
 .gmail_block {
-    background: black;
     padding: 100px 0;
+    background-image: url('../pages_partners/barca_img.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     /*margin: 5px;*/
 }
 
@@ -240,4 +315,245 @@
     width: 100%;
     height: 100%;
     /*;: cover;*/
+}
+
+/*ticket_payment */
+
+
+
+
+
+/* your_set*/
+.container_your_set {
+    width: 400px;
+    height: 350px;
+    border: 1px solid red;
+    margin: 60px auto; /* Центрирует по горизонтали */
+    background: rgba(0, 0, 0, 0.67);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;        /* Центр по горизонтали */
+    justify-content: space-between; /* Раздвигает верхний текст и чекеры */
+    padding: 30px 20px 40px;    /* Отступы сверху/по бокам/снизу */
+    box-sizing: border-box;
+}
+
+.container_your_set span {
+    font-size: 28px;
+    font-family: 'Barcelony', sans-serif;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.container_checkler_1 {
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    flex-wrap: wrap;
+    max-width: 90%;
+    padding-bottom: 30px;
+}
+
+
+.checkler {
+    background: grey;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.checked {
+    background: green;
+}
+
+
+
+/*corzina-ticket*/
+
+.corzina {
+
+}.container_corzina {
+     width: 40px;
+     height: 40px;
+     background: #fff;
+     border-radius: 50px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     position: fixed; /* Фиксированное позиционирование */
+     top: 20px;      /* Отступ сверху */
+     right: 20px;    /* Отступ справа */
+     transition: all 1s ease-in-out;
+     cursor: pointer;
+     z-index: 999;
+ }
+.p_corzina {
+    opacity: 0;
+    position: absolute; /* ОБЯЗАТЕЛЬНО */
+    top: 110%; /* чуть ниже корзины */
+    left: 50%;
+    transform: translateX(-50%); /* центрирует по горизонтали */
+    background: white;
+    color: black;
+    font-size: 14px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    white-space: nowrap;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+.container_corzina:hover .p_corzina {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+}
+.corzina span container_indicator {
+    width: 10px;
+    height: 10px;
+    border: 2px solid red;
+    background: #000;
+}
+.indicator_ticket span {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    /*bottom: 10px;*/
+    background: orange;
+    font-size: 1rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Блок формы */
+.card_form_container {
+    width: 400px;
+    height: auto;
+    border: 1px solid red;
+    margin: 40px auto;
+    background: rgba(0, 0, 0, 0.67);
+    position: relative;
+    padding: 30px 20px;
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    font-family: 'Barcelony', sans-serif;
+}
+
+.close {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.3s ease;
+    z-index: 1;
+
+}
+
+.close_btn:hover {
+    color: #ff4d4d;  /* Изменение цвета при наведении */
+}
+
+.close_btn {
+    padding: 20px;
+}
+
+/* Заголовок формы */
+.card_form_container h2 {
+    text-align: center;
+    font-size: 28px;
+    color: white;
+}
+
+/* Инпуты */
+.card_form_container input {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 16px;
+    border: 1px solid #ff4d4d;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 6px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.card_form_container input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    font-family: 'Barcelony', sans-serif;
+}
+
+.card_form_container input:focus {
+    border: 1px solid orange;
+}
+
+/* Кнопка */
+.card_form_container button {
+    width: 80%;
+    padding: 12px;
+    font-size: 18px;
+    font-family: 'Barcelony', sans-serif;
+    background: orange;
+    color: black;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin: 0 auto;
+}
+
+.card_form_container button:hover {
+    background: darkorange;
+}
+
+/*btn_oformlenie*/
+
+.container__oformlenie {
+    position: absolute;
+    bottom:0;
+    left: 24%;
+}
+
+#oformlenie{
+    padding: 4px 50px;
+    cursor:pointer;
+    border-radius: 8px;
+    background: darkred;
+    border: none;
+    margin-bottom: 5px;
+    font-family: 'barca_13' , sans-serif;
+    font-size: 1.2rem;
+}
+#card_form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#card_form input,
+#card_form button {
+    width: 100%;
+}
+
+
+.container h3 {
+    font-family: 'Barcelony', sans-serif;
 }

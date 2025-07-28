@@ -2,6 +2,8 @@
     font-family: 'barca_13';
     src: url("../fonts/barcelona_2013_by_hd.ttf");
 }
+
+
 /*BLOCK TICKET*/
 #block_buy_ticket {
 
@@ -25,7 +27,7 @@
     background-size: cover;
 
     /*background: rgba(0, 0, 0, 0.4);*/
-    background-image: url(../images/barsa_ticket_fon.jpg);
+    background-image: url(../images/bgi_for_buying_tickets.jpg);
     background-position: center;
 
 
@@ -72,9 +74,15 @@
     transition: all 1s ease-in-out;
     display: none;
 }
+.match-card_vip:hover {
+    cursor: pointer;
+    scale: 1.08;
+    visibility: visible;
+}
 .match-card:hover {
     cursor: pointer;
-    scale: 1.02;
+    scale: 1.08;
+    visibility: visible
 }
 
 .match-note {
@@ -172,7 +180,7 @@
 
 #vip_tickets:hover,
 #basic_tickets:hover {
-    transform: scale(1.07);
+    transform: scale(1.1);
     box-shadow: 0 0 20px rgba(100, 100, 255, 0.7);
 }
 
@@ -225,8 +233,8 @@
 
 }
 #btn-get {
-    margin-left: 120px;
-    width: 200px;
+    margin-left: 920px;
+    width: 100px;
 
 }
 .inner_header {
@@ -235,6 +243,7 @@
     align-items: center;
     justify-content: space-around;
     gap: 118px;
+    font-family: 'barca_13', sans-serif;
 }
 .header_content:hover {
     scale: 1.1;
@@ -271,6 +280,7 @@
     justify-content: space-around;
     width: 600px;
     position: absolute;
+    font-size: 24px;
 }
 
 .menu_link a {
@@ -285,8 +295,10 @@
 /* MAIN BLOCK */
 
 .main_block {
-    padding: 100px 0;
-    background: black;
+    padding: 285px 0;
+    /*background: black;*/
+    background: url('../images/camp_nou_main.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
 
 /* BUTTONS COLOR PICKER */
@@ -327,13 +339,16 @@
 
 .slider_block {
     padding: 100px 0;
-    background: black;
+    /*background: black;*/
+    background: url('../images/camp_nou.jpg') no-repeat center center fixed;
+    background-size: cover;
+
 }
 
 .slider {
     position: relative;
     width: 100%;
-    height: 300px;
+    height: 400px;
     overflow: hidden;
     border: 3px solid var(--orange);
     border-radius: 20px;
@@ -345,8 +360,8 @@
 
 .slide {
     position: absolute;
-    top: 60px;
-    left: 0;
+    /*top: 60px;*/
+    left: -150px;
     width: 100%;
     height: 100%;
     display: none;
@@ -356,26 +371,37 @@
 .slide_card {
     color: white;
     margin: 0 auto;
-    width: 500px;
+    width: 800px;
     text-align: center;
+}
+.slide_card img {
+    width: 250px;
+    height: 230px;
+    object-fit: cover;
+    background-repeat:no-repeat;
+    background-position: center;
+    border-radius: 50px;
+    margin-bottom: 20px;
 }
 
 .slide_card h3 {
     color: white;
     text-transform: uppercase;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .slide_card p {
-    font-size: 16px;
+    font-size: 40px;
+    font-family: barca_13, sans-serif;
     text-align: justify;
-    margin: 10px 0;
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
-.slide_card a {
-    color: var(--orange);
-    text-decoration: underline;
-}
+
 
 .slide.active_slide {
     display: block;
@@ -384,8 +410,11 @@
 /* VIDEO BLOCK */
 
 .block_video {
-    background: black;
-    padding: 100px 0;
+    /*background: rgba(255, 255, 255, 0.54);*/
+   padding: 100px 0;
+    background: #000;
+    position: relative;
+
 }
 
 .inner_block_video {
@@ -457,6 +486,12 @@
 
 .modal_content input {
     width: 100%;
+    padding: 10px;
+    border-radius: 15px;
+    transition: all 0.5s ease-in-out;
+}
+.modal_content input:hover {
+    transform: scale(1.1);
 }
 
 /*-------BOTTLE-------*/
@@ -670,4 +705,125 @@
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
+}
+
+.vertical-line {
+    width: 0px;
+    height: 700px; /* или auto, или 100% — в зависимости от контекста */
+    background-color: black;
+    margin: -268px -10px; /* отступы слева и справа */
+    position: absolute;
+    top: 0;
+    right: 450px;
+
+}
+.img_right {
+    position: absolute;
+    margin: -50px -10px;
+    top: 49px;
+    right: 120px;
+}
+
+.title_cont {
+    position: absolute;
+    font-size: 50px;
+    font-family: 'barca_13', sans-serif;
+    margin-left: 479px;
+}
+
+.inner_footer:nth-child(1) {
+    opacity: 0.1;
+}
+.inner_footer img {
+    opacity: 0.5;
+    transition: all 1s ease;
+}
+.inner_footer img:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+
+
+.container_follow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+    margin: 65px auto;
+    padding-right: 0px;
+}
+
+h1 {
+    color: #004D98;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.social-block {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+.social-block:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgb(119, 21, 21), 0 4px 6px rgb(119, 21, 21);
+
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.twitter {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/733/733579.png');
+}
+
+.tiktok {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/3046/3046121.png');
+}
+
+.spotify {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/2111/2111624.png');
+}
+
+.discord {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/3670/3670157.png');
+}
+
+.social-info {
+    flex-grow: 1;
+}
+
+.social-name {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 3px;
+}
+
+.social-handle {
+    color: #666;
+    font-size: 14px;
+}
+.span_media {
+    color: white;
+    font-family: 'barca_13', sans-serif;
+    font-size: 40px;
+    padding-bottom: 40px;
+    position: absolute;
+    top: 0;
+    left: 550px;
+    padding-top: 40px;
 }
