@@ -358,6 +358,29 @@ payerBtn.onclick = (e) => {
     }
 }
 
+// screamer
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const screamer = document.querySelector('.screamer');
+
+    function showScreamer() {
+        screamer.classList.add('active');
+        setTimeout(() => {
+            screamer.classList.remove('active');
+        }, 3000);
+    }
+
+    const screamerShown = localStorage.getItem('screamerShown');
+
+    if (!screamerShown) {
+        setTimeout(() => {
+            showScreamer();
+            localStorage.setItem('screamerShown', 'true');
+        }, 5000);
+    }
+});
+
 
 // payerBtn.onclick = (e) => {
 //     const userValue = inputUser.value.trim()
@@ -371,3 +394,38 @@ payerBtn.onclick = (e) => {
 //         payerBtn.innerText = 'Оплатить'
 //     }
 // }
+
+// const open = () => {
+//     modal.style.display = 'block'
+//     document.body.style.overflow = 'hidden'
+// }
+// const close = () => {
+//     modal.style.display = 'none'
+//     document.body.style.overflow = ''
+// }
+//
+// modalCloseBtn.onclick = () => close()
+// modalOpenBtn.onclick = () => open()
+//
+// modal.onclick = (event) => {
+//     if (event.target === modal) close()
+// }
+//
+// function onScroll() {
+//     const scrollTop = window.scrollY;
+//     const windowHeight = window.innerHeight;
+//     const documentHeight = document.documentElement.scrollHeight;
+//
+//     if (scrollTop + windowHeight >= documentHeight - 5) {
+//         open();
+//         window.removeEventListener('scroll', onScroll);
+//     }
+// }
+// window.addEventListener('scroll', onScroll)
+
+
+
+
+// Можно сразу вызвать, если хочешь показать сразу при загрузке
+// showScreamer();
+

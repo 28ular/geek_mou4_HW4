@@ -285,6 +285,7 @@
 
 .menu_link a {
     text-transform: uppercase;
+    color: #8B1E3F;
 }
 
 .menu_link:hover {
@@ -728,7 +729,7 @@
     position: absolute;
     font-size: 50px;
     font-family: 'barca_13', sans-serif;
-    margin-left: 479px;
+    margin-left: 496px;
 }
 
 .inner_footer:nth-child(1) {
@@ -824,6 +825,6 @@ h1 {
     padding-bottom: 40px;
     position: absolute;
     top: 0;
-    left: 550px;
+    left: 485px;
     padding-top: 40px;
 }

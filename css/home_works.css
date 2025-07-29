@@ -557,3 +557,28 @@
 .container h3 {
     font-family: 'Barcelony', sans-serif;
 }
+
+.screamer {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    z-index: 9999;
+}
+
+.screamer.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.screamer img {
+    max-width: 300px;
+    border-radius: 10px;
+}

@@ -305,6 +305,7 @@ hr {
     height: auto;
     border-radius: 6px;
     margin-bottom: 10px;
+    transition: all 0.7s ease-in-out;
 }
 
 .card h3 {
@@ -330,7 +331,9 @@ hr {
     z-index: 2;
     border-radius: 50%;
 }
-
+.card img:hover {
+    transform: scale(1.1);
+}
 .slider-btn.left {
     left: 10px;
 }
